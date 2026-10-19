@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StyleSphere - AI Fashion Advisor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body style="margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color:#f9f9f9; color:#333;">
+
+  <!-- Navigation Bar -->
+  <nav style="background-color:#1a1a1a; padding:1.5rem; position:sticky; top:0; z-index:100;">
+    <ul style="list-style:none; display:flex; justify-content:center; margin:0; padding:0;">
+      <li style="margin: 0 30px;"><a href="index.html" style="color:white; text-decoration:none; font-weight:700;">Home</a></li>
+      <li style="margin: 0 30px;"><a href="style advice.html" style="color:white; text-decoration:none; font-weight:700;">Style Advice</a></li>
+      <li style="margin: 0 30px;"><a href="features.html" style="color:white; text-decoration:none; font-weight:700;">Features</a></li>
+      <li style="margin: 0 30px;"><a href="about.html" style="color:white; text-decoration:none; font-weight:700;">About Us</a></li>
+      <li style="margin: 0 30px;"><a href="contact.html" style="color:white; text-decoration:none; font-weight:700;">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with Image -->
+  <section style="background: url('images/hero1.jpg') no-repeat center center; background-size: cover; height:90vh; display:flex; align-items:center; justify-content:center; padding:2rem;">
+    <div style="text-align:center;">
+      <img src="istockphoto-1553415091-612x612.jpg" alt="Welcome to StyleSphere" style="max-width:500000px; width:90%; border-radius:1222px; box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+      <p style="font-size:1.2rem; color:white; margin-top:1.5rem;">Your Personal AI Fashion Advisor</p>
+      <button onclick="location.href='#features'" style="margin-top:2rem; padding:0.8rem 2rem; font-size:1rem; background:white; color:#880e4f; border:none; border-radius:8px; cursor:pointer;">Get Started</button>
+    </div>
+</section>
+
+
+  <!-- Features Section -->
+  <section id="features" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem; padding:4rem 2rem; background-color:white;">
+    <div style="background-color:#f7f7f7; padding:2rem; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+      <i class="fas fa-brain" style="font-size:3rem; color:#e91e63;"></i>
+      <h3 style="color:#880e4f; margin-top:1rem;">AI-Powered Fashion</h3>
+      <p style="color:#666;">Get fashion advice personalized to your style and occasion.</p>
+    </div>
+    <div style="background-color:#f7f7f7; padding:2rem; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+      <i class="fas fa-camera-retro" style="font-size:3rem; color:#e91e63;"></i>
+      <h3 style="color:#880e4f; margin-top:1rem;">Smart Image Recognition</h3>
+      <p style="color:#666;">Upload your photo and get AI analysis for outfit suggestions.</p>
+    </div>
+    <div style="background-color:#f7f7f7; padding:2rem; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+      <i class="fas fa-heart" style="font-size:3rem; color:#e91e63;"></i>
+      <h3 style="color:#880e4f; margin-top:1rem;">Love Your Style</h3>
+      <p style="color:#666;">Discover styles, trends, and tips tailored to you.</p>
+    </div>
+  </section>
+
+  <!-- Style Advice Form -->
+  <section id="form" style="padding:3rem; background-color:#ffffff; border-radius:16px; max-width:800px; margin:3rem auto; box-shadow:0 8px 20px rgba(0,0,0,0.1);">
+    <h2 style="text-align:center; font-size:2rem; color:#880e4f;">Get Your Style Advice</h2>
+    <form id="adviceForm" enctype="multipart/form-data" style="margin-top:2rem;">
+      <label for="styleText" style="font-weight:600; display:block; color:#444; margin-top:1rem;">What's the occasion?</label>
+      <textarea id="styleText" placeholder="e.g. Outfit for a wedding, formal event" required style="margin-top:0.5rem; padding:0.75rem; width:100%; border:1px solid #ccc; border-radius:8px; font-size:1rem;"></textarea>
+
+      <label for="styleImage" style="font-weight:600; display:block; color:#444; margin-top:1rem;">Upload your outfit or selfie:</label>
+      <input type="file" id="styleImage" accept="image/*" required style="margin-top:0.5rem; padding:0.75rem; width:100%; border:1px solid #ccc; border-radius:8px; font-size:1rem;">
+
+      <button type="submit" style="margin-top:1.5rem; background-color:#e91e63; color:white; padding:1rem; border:none; border-radius:10px; font-size:1rem; cursor:pointer;">Get Style Advice</button>
+    </form>
+    <div id="aiOutput" style="display:none; margin-top:1rem;"></div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="background-color:#fff; padding:4rem 2rem; text-align:center;">
+    <h2 style="font-size:2rem; color:#880e4f;">About Us</h2>
+    <p style="color:#444; max-width:700px; margin:0 auto;">StyleSphere is your personal AI-powered fashion advisor, bringing the latest in trends and style directly to your wardrobe. Whether you’re dressing for a party, interview, or just your everyday vibe, StyleSphere has your back.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color:#1a1a1a; color:white; padding:2rem 1rem; text-align:center;">
+    <p>© 2025 StyleSphere | 
+      <a href="#" style="color:#e91e63; text-decoration:none;">Privacy Policy</a> | 
+      <a href="#" style="color:#e91e63; text-decoration:none;">Terms of Service</a> | 
+      <a href="contact.html" style="color:#e91e63; text-decoration:none;">Contact</a>
+    </p>
+  </footer>
+
+  <!-- Script for AI Form Simulation -->
+  <script>
+    const form = document.getElementById("adviceForm");
+    const output = document.getElementById("aiOutput");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      output.style.display = "block";
+      output.innerHTML = "<em>Analyzing your style...</em>";
+
+      const formData = new FormData();
+      formData.append("text", document.getElementById("styleText").value);
+      formData.append("image", document.getElementById("styleImage").files[0]);
+
+      try {
+        const res = await fetch("/predict", {
+          method: "POST",
+          body: formData
+        });
+
+        if (!res.ok) throw new Error("Failed to fetch");
+
+        const result = await res.json();
+        output.innerHTML = `
+          <h3>AI Suggestion:</h3>
+          <p>${result.suggestion}</p>
+        `;
+        form.reset();
+      } catch (error) {
+        output.innerHTML = "<p>Something went wrong. Try again later.</p>";
+      }
+    });
+  </script>
+
+</body>
+</html>

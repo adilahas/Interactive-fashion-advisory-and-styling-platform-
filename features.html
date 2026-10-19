@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features - StyleSphere</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 30px;
+    }
+    nav ul li a {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #e91e63;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60vh;
+      background: linear-gradient(to right, #e91e63, #880e4f);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+
+    /* Features Section */
+    #features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 4rem 2rem;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .feature {
+      background-color: #f7f7f7;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .feature:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature i {
+      font-size: 3rem;
+      color: #e91e63;
+      margin-bottom: 1rem;
+    }
+    .feature h3 {
+      font-size: 1.5rem;
+      color: #880e4f;
+      margin-top: 1rem;
+    }
+    .feature p {
+      color: #666;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    footer a {
+      color: #e91e63;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+    }
+    footer a:hover {
+      color: #fce4ec;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      #features {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Our Features</h1>
+      <p>Explore the unique features that make StyleSphere your perfect fashion companion</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <div class="feature animate_animated animate_fadeIn">
+      <i class="fas fa-brain"></i>
+      <h3>AI-Powered Fashion</h3>
+      <p>Get personalized style recommendations based on your preferences and the latest trends.</p>
+    </div>
+    <div class="feature animate_animated animatefadeIn animate_delay-1s">
+      <i class="fas fa-camera-retro"></i>
+      <h3>Smart Image Recognition</h3>
+      <p>Upload your outfit photos and get AI-generated outfit suggestions and tips.</p>
+    </div>
+    <div class="feature animate_animated animatefadeIn animate_delay-2s">
+      <i class="fas fa-heart"></i>
+      <h3>Personalized Advice</h3>
+      <p>Receive recommendations for outfits suited to your style, occasion, and body type.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 StyleSphere | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#contact">Contact</a></p>
+  </footer>
+
+</body>
+</html>

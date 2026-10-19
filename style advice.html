@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StyleSphere - AI Fashion Advisor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 30px;
+    }
+    nav ul li a {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #e91e63;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      background: linear-gradient(to right, #e91e63, #880e4f);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+    .hero button {
+      margin-top: 2rem;
+      padding: 1rem 3rem;
+      background-color: white;
+      color: #880e4f;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .hero button:hover {
+      background-color: #fce4ec;
+    }
+
+    /* Style Advice Section */
+    #style-advice {
+      padding: 4rem 2rem;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .advice-form-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 3rem;
+      background-color: #f9f9f9;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .advice-form-container:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .advice-form-container h2 {
+      font-size: 2.5rem;
+      color: #880e4f;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 1rem;
+      display: block;
+      color: #444;
+    }
+
+    textarea,
+    input[type="file"],
+    select {
+      margin-top: 0.5rem;
+      padding: 0.75rem;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    textarea:focus,
+    input[type="file"]:focus,
+    select:focus {
+      border-color: #e91e63;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      background-color: #e91e63;
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+
+    /* AI Output */
+    #aiOutput {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #e91e63;
+      display: none;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    footer a {
+      color: #e91e63;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+    }
+    footer a:hover {
+      color: #fce4ec;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#style-advice">Style Advice</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>StyleSphere</h1>
+      <p>Your Personalized AI Fashion Assistant</p>
+      <button onclick="window.location.href='#style-advice'">Get Style Advice</button>
+    </div>
+  </section>
+
+  <!-- Style Advice Section -->
+  <section id="style-advice">
+    <div class="advice-form-container">
+      <h2>Get Your Style Advice</h2>
+      <form id="adviceForm" enctype="multipart/form-data">
+        <label for="occasion">What's the occasion?</label>
+        <textarea id="occasion" placeholder="e.g. Outfit for a wedding, formal event" required></textarea>
+
+        <label for="styleMood">What's your style mood today?</label>
+        <select id="styleMood" required>
+          <option value="casual">Casual</option>
+          <option value="formal">Formal</option>
+          <option value="party">Party</option>
+          <option value="business">Business</option>
+          <option value="athleisure">Athleisure</option>
+        </select>
+
+        <label for="styleImage">Upload your outfit or selfie:</label>
+        <input type="file" id="styleImage" accept="image/*" required />
+
+        <button type="submit">Get Style Advice</button>
+      </form>
+      <div id="aiOutput"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 StyleSphere | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#contact">Contact</a></p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("adviceForm");
+    const output = document.getElementById("aiOutput");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      output.style.display = "block";
+      output.innerHTML = "<em>Analyzing your style...</em>";
+
+      const formData = new FormData();
+      formData.append("occasion", document.getElementById("occasion").value);
+      formData.append("styleMood", document.getElementById("styleMood").value);
+      formData.append("image", document.getElementById("styleImage").files[0]);
+
+      try {
+        // Simulate AI response
+        const fakeResponse = {
+          suggestion: "For your casual mood, I suggest pairing a simple T-shirt with denim jeans and sneakers for a comfy, stylish look!"
+        };
+        setTimeout(() => {
+          output.innerHTML = `
+            <h3>AI Suggestion:</h3>
+            <p>${fakeResponse.suggestion}</p>
+          `;
+        }, 1500); // Simulated delay
+      } catch (error) {
+        output.innerHTML = "<p>Something went wrong. Try again later.</p>";
+      }
+    });
+  </script>
+
+</body>
+</html>

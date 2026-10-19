@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - StyleSphere</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 30px;
+    }
+    nav ul li a {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #e91e63;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60vh;
+      background: linear-gradient(to right, #e91e63, #880e4f);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+
+    /* About Section */
+    #about {
+      background-color: #ffffff;
+      padding: 4rem 2rem;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      margin: 2rem auto;
+      border-radius: 16px;
+      max-width: 900px;
+    }
+
+    #about h2 {
+      font-size: 2.5rem;
+      color: #880e4f;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    #about p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    #about .team-members {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      background-color: #f7f7f7;
+      padding: 2rem;
+      border-radius: 16px;
+      margin: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 250px;
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .team-member h3 {
+      font-size: 1.5rem;
+      color: #880e4f;
+      margin-bottom: 0.5rem;
+    }
+
+    .team-member p {
+      font-size: 1rem;
+      color: #777;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    footer a {
+      color: #e91e63;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+    }
+    footer a:hover {
+      color: #fce4ec;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>About Us</h1>
+      <p>Get to know the people behind StyleSphere</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>Who We Are</h2>
+    <p>At StyleSphere, we believe that fashion should be personal, intuitive, and fun. Our mission is to provide AI-powered, personalized fashion advice that helps individuals feel confident and stylish no matter the occasion.</p>
+
+    <h3>Our Team</h3>
+    <div class="team-members">
+      <div class="team-member">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Team Member 1">
+        <h3>Neeraj</h3>
+        <p>Co-Founder & CEO</p>
+      </div>
+
+      <div class="team-member">
+        <img src="C:/Users/adila/OneDrive/Pictures/Camera Roll/WIN_20250430_14_38_26_Pro.jpg" alt="Team Member 2">
+        <h3>Naveen S</h3>
+        <p>Co-Founder & CTO</p>
+      </div>
+
+      <div class="team-member">
+        <img src="C:/Users/adila/OneDrive/Pictures/Camera Roll/WIN_20250430_14_38_05_Pro.jpg" alt="Team Member 3">
+        <h3>Adhil Hashim</h3>
+        <p>Head of AI & Data Science</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 StyleSphere | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#contact">Contact</a></p>
+  </footer>
+
+</body>
+</html>
